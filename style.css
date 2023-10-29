@@ -1,0 +1,157 @@
+/* style.css */
+/* Style the navigation bar */
+nav {
+  background-image: url('bg.png'); /* Set the background image */
+  background-size: cover; /* Make sure the background image covers the entire nav */
+  height: 80px; /* Adjust the height as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Style the menu list */
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Style the menu items */
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the anchor links */
+a {
+  text-decoration: none;
+  color: white; /* Set the color of the text */
+  font-weight: bold;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* Set the background image, make it transparent, and position it */
+body {
+  /* background-image: url('calendar.png'); Set the background image */
+  background-size: 100% auto; /* Set the width to 100% and maintain the original height */
+  /* background-attachment: Prevent background scrolling with page */
+  /* Make the background very transparent (70%) */
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Style the <h1> headline */
+h1 {
+  font-size: 36px; /* Adjust the font size as needed */
+  text-align: center; /* Center align the text */
+  margin-top: 40px; /* Add space from the navigation bar */
+  color: #ffffff; /* Set the text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for better visibility */
+  /* give text a green background */
+  background-color: #2b422b;
+}
+
+/* Add styles for the search form */
+.search-form {
+  text-align: center; /* Center-align the search bar */
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Style the search input field */
+.search-form input[type="text"] {
+  width: 60%; /* Set the width of the input field */
+  padding: 10px; /* Add padding for better appearance */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Add rounded corners */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style the search button */
+.search-form button {
+  padding: 10px 20px; /* Add padding for better appearance */
+  background-color: #007BFF; /* Set button background color */
+  color: white; /* Set button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add rounded corners */
+  font-size: 16px; /* Set font size */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Style for the time box */
+#time-box {
+  flex: 1;
+  padding: 10px;
+  border-left: 1px solid #ccc;
+}
+
+/* Style for individual time slots */
+.time-slot {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Style to indicate a busy time slot */
+.busy {
+  background-color: #ff7f7f; /* Customize the color */
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Add this CSS code to your existing CSS or a separate CSS file */
+
+/* Style for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+/* Style for the footer container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Style for the footer logo */
+.footer-logo img {
+  width: 100px; /* Adjust the logo size */
+}
+
+/* Style for the footer content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-top: 20px;
+}
+
+/* Style for the footer information section */
+.footer-info, .footer-links {
+  flex: 1;
+}
+
+/* Style for the footer links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style for the footer bottom section */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}

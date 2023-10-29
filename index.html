@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bizzy Schedule | Easy Calendar for Busy People</title>
+  <!-- Link to the external style.css file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- Navigation bar (from the previous answer) -->
+  <nav>
+    <!-- Add your logo with the appropriate path to the src attribute -->
+    <img id="logo" src="logo.png" alt="Bizzy Schedule Logo">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">How it works</a></li>
+      <li><a href="#">Frequently Asked Questions</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Sign Up</a></li>
+      <li><a href="#">Log In</a></li>
+    </ul>
+  </nav>
+
+  <!-- Add the <h1> headline -->
+  <h1>Let your customers know when you're Busy!</h1>
+
+  <!-- Add the <h2> sub-headline -->
+  <h2>As a customer you sometimes want to see when someone is free before you contact them</h2>
+
+  <!-- Add the <h3> sub-headline -->
+  <h3>As a business owner you want to let your customers know when you're available</h3>
+
+  <!-- Add the <h4> sub-headline -->
+  <h4>With Bizzy Schedule you can do both!</h4>
+
+
+  <!-- Add this code within the <nav> element or wherever you want the search bar -->
+  <form action="#" method="get" class="search-form">
+    <input type="text" name="search" id="search" placeholder="Search for a tradesperson">
+    <button type="submit">Search</button>
+  </form>
+
+  <br><br>
+
+  <div class="companyInfo">
+    <!-- company or individual business details -->
+    <!--company name-->
+    <label>
+      <input type="text" name="companyName" placeholder="Company Name">
+    </label>
+    <!--company address-->
+    <label>
+      <input type="text" name="companyAddress" placeholder="Company Address">
+    </label>
+    <!--company phone number-->
+    <label>
+      <input type="text" name="companyPhone" placeholder="Company Phone Number">
+    </label>
+    <!--company email-->
+    <label>
+      <input type="text" name="companyEmail" placeholder="Company Email">
+    </label>
+    <!--company website-->
+    <label>
+      <input type="text" name="companyWebsite" placeholder="Company Website">
+    </label>
+    <!--company phone number-->
+    <label>
+      <input type="text" name="companyPhone" placeholder="Company Phone Number">
+    </label>
+  </div>
+    
+
+  <div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
+    <div class="card">
+        <h3 class="card-header" id="monthAndYear"></h3>
+        <table class="table table-bordered table-responsive-sm" id="calendar">
+            <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+            </thead>
+
+            <tbody id="calendar-body">
+
+            </tbody>
+        </table>
+
+        <div class="form-inline">
+
+            <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Previous</button>
+
+            <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
+        </div>
+        <br/>
+        <form class="form-inline">
+            <label class="lead mr-2 ml-2" for="month">Jump To: </label>
+            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                <option value=0>Jan</option>
+                <option value=1>Feb</option>
+                <option value=2>Mar</option>
+                <option value=3>Apr</option>
+                <option value=4>May</option>
+                <option value=5>Jun</option>
+                <option value=6>Jul</option>
+                <option value=7>Aug</option>
+                <option value=8>Sep</option>
+                <option value=9>Oct</option>
+                <option value=10>Nov</option>
+                <option value=11>Dec</option>
+            </select>
+
+
+            <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+            <option value=1990>1990</option>
+            <option value=1991>1991</option>
+            <option value=1992>1992</option>
+            <option value=1993>1993</option>
+            <option value=1994>1994</option>
+            <option value=1995>1995</option>
+            <option value=1996>1996</option>
+            <option value=1997>1997</option>
+            <option value=1998>1998</option>
+            <option value=1999>1999</option>
+            <option value=2000>2000</option>
+            <option value=2001>2001</option>
+            <option value=2002>2002</option>
+            <option value=2003>2003</option>
+            <option value=2004>2004</option>
+            <option value=2005>2005</option>
+            <option value=2006>2006</option>
+            <option value=2007>2007</option>
+            <option value=2008>2008</option>
+            <option value=2009>2009</option>
+            <option value=2010>2010</option>
+            <option value=2011>2011</option>
+            <option value=2012>2012</option>
+            <option value=2013>2013</option>
+            <option value=2014>2014</option>
+            <option value=2015>2015</option>
+            <option value=2016>2016</option>
+            <option value=2017>2017</option>
+            <option value=2018>2018</option>
+            <option value=2019>2019</option>
+            <option value=2020>2020</option>
+            <option value=2021>2021</option>
+            <option value=2022>2022</option>
+            <option value=2023>2023</option>
+            <option value=2024>2024</option>
+            <option value=2025>2025</option>
+            <option value=2026>2026</option>
+            <option value=2027>2027</option>
+            <option value=2028>2028</option>
+            <option value=2029>2029</option>
+            <option value=2030>2030</option>
+        </select></form>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+
+<div id="calendar-container">
+  <!-- Calendar section (existing code) -->
+  <div id="calendar">
+    <!-- ... (calendar HTML) ... -->
+  </div>
+
+  <!-- Time box section -->
+  <div id="time-box">
+    <!-- Time slots for a 24-hour day -->
+    <!-- Generate these slots dynamically using JavaScript -->
+  </div>
+</div>
+
+<br><br>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <!-- Add your logo or branding here -->
+      <img src="logo.png" alt="Bizzy Schedule Logo">
+    </div>
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Contact Information</h3>
+        <!-- Add your contact information here -->
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123-456-7890</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <!-- Add copyright or additional information here -->
+    <p>&copy; 2023 Bizzy Schedule. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<!--<button name="jump" onclick="jump()">Go</button>-->
+<script src="scripts.js"></script>
+
+</body>
+</html>
